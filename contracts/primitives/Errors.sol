@@ -1,0 +1,43 @@
+// SPDX-License-Identifier: UNLICENSED
+// Copyright (c) 2026 Aperta. All rights reserved. Review only, see LICENSE.
+pragma solidity 0.8.36;
+
+error ZeroAddress();
+error ZeroAmount();
+error InvalidPrice();
+error BelowMinimum(uint256 provided, uint256 minimum);
+error AboveMaximum(uint256 provided, uint256 maximum);
+error Unauthorized(address caller);
+error NoOpenEpoch();
+error EpochNotOpen(uint256 epochId);
+error NoPendingDepositRequest(uint256 epochId);
+error EpochNotSettled(uint256 epochId);
+error EpochAlreadySettled(uint256 epochId);
+error MustClaimFirst(uint256 pendingEpochId);
+error NothingToClaim(address controller);
+error InsufficientBacking(uint256 required, uint256 available);
+error NavStale(uint256 lastUpdate, uint256 maxStaleness);
+error NavDeviationExceeded(uint256 provided, uint256 lowerBound, uint256 upperBound);
+error NavCommitPending();
+error NoPendingNavCommit();
+error NavCommitTooEarly();
+error EpochNotExpired();
+error SyncOperationsDisabled();
+error AsyncOperationsDisabled();
+error CallerNotOperator(address caller, address controller);
+error InvalidVaultMode();
+error AlreadyInitialized();
+error UpgradeNotAuthorized();
+error MaxCapExceeded(uint256 attempted, uint256 cap);
+error EpochNotFound(uint256 epochId);
+error PendingRequestExists(uint256 epochId);
+error InvalidClaimAmount(uint256 requested, uint256 available);
+error PriceNotFinalized(uint256 epochId);
+error StrategyManagerNotSet();
+error StrategyManagerMismatch(address provided, address expected);
+error StrategyRecallShortfall(uint256 requested, uint256 recovered);
+error EpochSettlementInProgress();
+error PreviewNotSupported();
+error CannotRecoverAsset(address token);
+error ForceSettleSameBlock();
+error ForceSettleNavTooStale(uint256 lastNavUpdateAt, uint256 maxStaleBound);
